@@ -36,7 +36,6 @@ switch ($h)
     ./check_sharepoint -u admin@office365.com -p adminpassword -d "companydomain" -s}
 }
 
-s
 #connect to SharePoint Site using -d
 function msolconnect
     \{
@@ -96,7 +95,8 @@ function logentry
 
     \}
 
-                          
+# Connect to SharePoint Online
+msolconnect
 
 # Apperror check
 if ($a -eq $true -and $pid -notlike "") {
